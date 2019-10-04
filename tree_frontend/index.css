@@ -1,0 +1,165 @@
+html, body {
+    background-image: url('../tree-api/treeimg/bg8.jpg');
+    height: 100%;
+    font-family: fantasy;
+}
+
+#login {
+    font-size: 35px;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    width: 100%;
+}
+
+input[type=submit] {
+    font-family: fantasy;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+input[type=text] {
+    text-align: center;
+    border: none;
+    background: rgba(255, 255, 255, 0.336);
+    font-family: fantasy;
+    font-size:30px; 
+}
+
+#login-submit:hover {
+    background-color: rgba(0, 255, 255, 0.315);
+}
+
+#main {
+    display: none;
+    height: 100%;
+}
+
+.dropdown {
+    position: fixed;
+    top:0;
+    left:0;
+    font-size: 20px;
+    margin-left: 5%;
+    margin-top: 8%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #b0b0b033;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content div {
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 20px;
+}
+
+.dropdown:hover {
+    background-color:#ffffff00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content div:hover {background-color: #b0b0b051}
+
+#grow-tree {
+    height: 100%;
+}
+
+#tree{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+#tree img {
+    position:absolute;
+    display: block;
+    width: 200px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+
+}
+#menu-bar {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    right: 0px; 
+    width: 15%; 
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-left: auto;
+
+}
+
+#menu-bar img{
+    width: 100%;
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+#menu-bar img:hover {
+    -webkit-filter: none;
+    filter: none;
+}
+
+/* .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  } 
+
+.container:hover .overlay {
+    opacity: 1;
+}
+  
+.text {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+} */
+
+#seed-choices {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    width: 630px;
+}
+
+#msg {
+    /* display */
+    position: fixed;
+    text-align: center;
+    top: 10%;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+}
