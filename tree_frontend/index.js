@@ -1,6 +1,7 @@
 const usersUrl = 'http://localhost:3000/users';
 const treesUrl = 'http://localhost:3000/trees';
 let user = "";
+let username = "";
 
 function fetchUser(username) {
     return fetch(usersUrl, {
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const eGrowTree = document.getElementById('grow-tree');
     const eMenubar = document.getElementById('menu-bar');
     const eTreeDiv = document.getElementById('tree');
-    let username = "";
+    const logout = document.getElementById('logout');
 
     login.addEventListener('submit', (e) => loginUser(e));
 
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         username = e.target[0].value;
         fetchUser(username).then(renderSeedDisplay);
+        eLogin.reset();
     };
 
     function renderSeedDisplay(){
@@ -81,7 +83,24 @@ document.addEventListener("DOMContentLoaded", () => {
             img.style.margin = '30px';
             img.addEventListener('click', (e) => newTree(e));
         };
+        // renderSeedNameInput();
     };
+
+    function renderSeedNameInput() {
+        const form = document.createElement('form');
+        form.className = 'seed-name';
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'seed-name';
+        const submit = document.createElement('input');
+        submit.type = 'submit';
+        submit.value = 'Name Your Seed'
+        submit.className = 'seed-name';
+
+        eSeedChoices.appendChild(form);
+        form.appendChild(input);
+        form.appendChild(submit);
+    }
 
     function newTree(e) {
         const user_id = user.id;
@@ -229,6 +248,13 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(() => renderSeedDisplay());
         
     };
+
+    logout.addEventListener('click', () => {
+        username = "";
+        user = "";
+        eLogin.style.display = '';
+        eMain.style.display = 'none';
+    })
 
 
 });
